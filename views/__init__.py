@@ -7,3 +7,4 @@ from .entry_requests import create_journal_entry
 from .entry_requests import update_entry
 from .mood_requests import get_all_moods
 from .mood_requests import get_single_mood
+from .tag_requests import get_all_tags

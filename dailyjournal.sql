@@ -22,3 +22,21 @@ INSERT INTO `Entry` VALUES (null, "Python", "I am learning how to delete entries
 
 SELECT * FROM Entry
 
+CREATE TABLE `Tag` (
+    `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    `name` TEXT NOT NULL
+);
+
+CREATE TABLE `EntryTag` (
+    `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    `entry_id` INTEGER,
+    `tag_id` INTEGER,
+    FOREIGN KEY(`entry_id`) REFERENCES `Entry`(`id`),
+    FOREIGN KEY(`tag_id`) REFERENCES `Tag`(`id`)
+);
+
+INSERT INTO `Tag` VALUES (null, "tag1")
+INSERT INTO `Tag` VALUES (null, "tag2")
+INSERT INTO `Tag` VALUES (null, "tag3")
+
+SELECT * FROM 
